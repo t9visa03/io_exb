@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Users</title>
+    <script src="users.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>Users</h1>
+
+    <h2>All users</h2>
+    <p>
+      If you want to see the users click below button <br>
+      <button type="button" name="button" onclick="getUsers()">Show users</button>
+    </p>
+
+    <h2>Selected user</h2>
+    <p>
+      <label for="userid">Give the user id</label>
+      <input type="text" id="userid" value="">
+      <button type="button" name="button" onclick="getUser()">Search</button>
+    </p>
+
+    <h2>Add user</h2>
+    <p>
+      <form id='addForm'>
+           <label for="id">ID</label> <br>
+           <input type="number" name="id" id="id"> <br>
+           <label for="fn">Firstname</label> <br>
+           <input type="text" name="fn" id="fn"> <br>
+           <label for="ln">Lastname</label> <br>
+           <input type="text" name="ln" id="ln"> <br>
+       </form>
+       <button onclick="addUser()">Add</button>
+    </p>
+
+    <h2>Update user</h2>
+    <p>
+      <label for="updateid">ID</label> <br>
+      <input type="number" name="id" id="updateid"> <br>
+      <button type="button" name="button" onclick="getUpdateData()">Get selected</button>
+      <form id='updateForm'>
+          <label for="updatefn">Firstname</label> <br>
+          <input type="text" name="fn" id="updatefn"> <br>
+          <label for="updateln">Lastname</label> <br>
+          <input type="text" name="ln" id="updateln"> <br>
+       </form>
+       <button onclick="updateUser()">Update</button>
+    </p>
+
+    <h2>Delete user</h2>
+    <p>
+      <label for="deleteid">Give the user id</label>
+      <input type="number" id="deleteid" value="">
+      <button type="button" name="button" onclick="deleteUser()">Delete</button>
+    </p>
+
+    <div id="results">
+      <h3>Results</h3>
+    </div>
+  </body>
+</html>
